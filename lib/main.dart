@@ -18,12 +18,17 @@ class MyApp extends StatelessWidget {
         primaryColorDark: Colors.black,
         fontFamily: "GoogleSansRegular",
       ),
-      home: Stack(
-        children: <Widget>[
-          ParticleBackgroundPage(),
-          ProfilePage(),
-        ],
+      home: Container(
+        decoration: BoxDecoration(color: Colors.grey),
+        child: Stack(
+          children: <Widget>[
+           
+            ParticleBackgroundPage(),
+            ProfilePage(),
+          ],
+        ),
       ),
     );
   }
 }
+

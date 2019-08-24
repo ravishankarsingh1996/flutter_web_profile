@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:raviportfolio/particle_flutter/particles.dart' as particle;
 import 'package:flutter_web/material.dart';
 import 'package:raviportfolio/simple_animations_package.dart';
 
@@ -8,8 +8,9 @@ class ParticleBackgroundPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        Positioned.fill(child: AnimatedBackground()),
-        Positioned.fill(child: Particles(30)),
+        // AnimatedParticle(),
+         Positioned.fill(child: AnimatedBackground()),
+        // Positioned.fill(child: Particles(30)),
       ],
     );
   }
@@ -116,9 +117,9 @@ class AnimatedBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tween = MultiTrackTween([
-      Track("color1").add(Duration(seconds: 3),
+      Track("color1").add(Duration(seconds: 5),
           ColorTween(begin: Color(0xff8a113a), end: Colors.lightBlue.shade900)),
-      Track("color2").add(Duration(seconds: 3),
+      Track("color2").add(Duration(seconds: 5),
           ColorTween(begin: Color(0xff440216), end: Colors.blue.shade600))
     ]);
 
@@ -128,6 +129,7 @@ class AnimatedBackground extends StatelessWidget {
       duration: tween.duration,
       builder: (context, animation) {
         return Container(
+          child: AnimatedParticle(),
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -139,3 +141,28 @@ class AnimatedBackground extends StatelessWidget {
   }
 }
 
+class AnimatedParticle extends StatefulWidget {
+  @override
+  _AnimatedParticleState createState() => _AnimatedParticleState();
+}
+
+class _AnimatedParticleState extends State<AnimatedParticle> {
+  @override
+  Widget build(BuildContext context) {
+    final tween = MultiTrackTween([
+      Track("color1").add(Duration(seconds: 3),
+          ColorTween(begin: Color(0xff8a113a), end: Colors.lightBlue.shade900)),
+      // Track("color2").add(Duration(seconds: 3),
+      //     ColorTween(begin: Color(0xff440216), end: Colors.blue.shade600))
+    ]);
+
+    return ControlledAnimation(
+      playback: Playback.MIRROR,
+      tween: tween,
+      duration: tween.duration,
+      builder: (context, animation) {
+          return particle.Particles(150, animation["color1"]);
+      },
+    );
+  }
+}
