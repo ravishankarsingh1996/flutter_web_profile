@@ -29,4 +29,5 @@ Checkout both here ----->
 Inspired By **Pawan Kumar** @iampawan
 
 Author of simple_animation -> Felix Blaschke
+
 Author of flutter_particles -> Tam Nguyen
