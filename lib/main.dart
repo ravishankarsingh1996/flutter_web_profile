@@ -1,6 +1,7 @@
 import 'package:flutter_web/material.dart';
-import 'package:raviportfolio/particle_background.dart';
 import 'package:raviportfolio/profile_page.dart';
+
+import 'bubble_anim/particle_background.dart';
 
 main() {
   runApp(MyApp());

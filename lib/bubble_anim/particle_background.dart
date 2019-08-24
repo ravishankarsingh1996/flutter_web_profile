@@ -9,8 +9,8 @@ class ParticleBackgroundPage extends StatelessWidget {
     return Stack(
       children: <Widget>[
         // AnimatedParticle(),
-         Positioned.fill(child: AnimatedBackground()),
-        // Positioned.fill(child: Particles(30)),
+         Positioned.fill(child: AnimatedBackground()), //Go to AnimatedBackground widget and comment the child to get bubble only background
+        // Positioned.fill(child: Particles(30)), //Uncomment when you need to show bubble
       ],
     );
   }
@@ -129,7 +129,7 @@ class AnimatedBackground extends StatelessWidget {
       duration: tween.duration,
       builder: (context, animation) {
         return Container(
-          child: AnimatedParticle(),
+          child: AnimatedParticle(), //Comment this when not using particle_flutter
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
