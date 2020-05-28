@@ -3,7 +3,7 @@ Flutter web representation of a my portfolio.
 
 Star⭐ the repo if you like what you see😉.
 
-Check out the full website here --> https://ravi.devmins.com & https://ravishankarsingh1996.github.io/flutter_web_profile
+Check out the full website here --> https://ravishankarsingh1996.github.io/flutter_web_profile
 
 ## ✨ Requirements
 * Any Operating System (ie. MacOS X, Linux, Windows)
