@@ -14,7 +14,7 @@ Check out the full website here --> https://ravishankarsingh1996.github.io/flutt
 There two variants of this website
 Checkout both here ----->
 
-1. Sample One : https://ravi.devmins.com
+1. Sample One : https://ravi.devmins.com (Unfortunately this site is down)
 
 
 <img src="extra/ravi.gif"/>
